@@ -1,0 +1,78 @@
+
+<html>
+    <body>
+        <header>
+            <h1 style="text-align: center; color: red; padding-bottom: 20px; background-color: silver;">Candidate Remarks</h1>
+        </header>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <h3 style="color: red;">Area for Viewing the Resume of the Candidate</h3>
+                </div>
+            </div>
+            <div class="column1">
+                <div class="card1">
+                    <b><h3 style="padding-bottom: 30px; color: white;">PanelList</h3></b>
+                    <div  *ngFor="let pl of panelList; index as i">
+                        <b style="color: white;">{{panelList[i]}} - {{grade[i]}} </b>
+                    </div>
+                </div>
+            </div>
+            <div  class="column2">
+                <div class="card1">
+                    <b><h3 style="color: white; padding-bottom: 30px;">Candidate</h3></b>
+                    <b style="color: white;">{{candidate_id}} <br>
+                    {{candidate_name}} <br>
+                    {{contact}} <br></b>
+                </div>
+            </div>
+            <div class="column3">
+                <div class="card2">
+                    <b><h3 style="color: red;">Ratings </h3></b><br>
+                    <table>
+                        <th>
+                            Programming
+                            <table>
+                                <td>Technical</td>
+                                <td>Reasoning</td>
+                            </table>
+                                <tr><input type="text" size="1" maxlength="2">/10
+                                <input type="text" size="1" maxlength="2">/10</tr>
+                        </th>
+                        <th>
+                            Specialization
+                            <table>
+                                <td>Technical</td>
+                                <td>Reasoning</td>
+                            </table>
+                            <tr>
+                                <input type="text" size="1" maxlength="2">/10
+                                <input type="text" size="1" maxlength="2">/10
+                            </tr>
+                        </th>
+                        <th>
+                            Communication Skills
+                            <tr><input type="text" size="1" maxlength="2">/10</tr>
+                        </th>
+                    </table>
+                </div>
+            </div>
+            <div class="column4">
+                <div class="card3">
+                    <b><h3 style="color: red;">Final Feedback</h3></b><br>
+                    <textarea name="Feedback" id="Feedback" rows="4" cols="180"></textarea>
+                </div>
+            </div>
+            <div class="column4">
+                <div class="card4">
+                    <button class="btn btn-success" style="float: left; margin-left: 400px;">Selected</button>
+                    <button class="btn btn-danger" style="float: right; margin-right: 400px;">Rejected</button>
+                    <button class="btn btn-primary" style="float: center;">Hold</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h5 style="color: white; background-color: black; text-align: center;">Hiring App Ltd</h5>
+        </footer>
+    </body>
+</html>
