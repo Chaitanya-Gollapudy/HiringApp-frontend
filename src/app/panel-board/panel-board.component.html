@@ -12,19 +12,20 @@
             </div>
             <div class="column1">
                 <div class="card1">
-                    <b><h3 style="padding-bottom: 30px; color: white;">PanelList</h3></b>
-                    <div  *ngFor="let pl of panelList; index as i">
-                        <b style="color: white;">{{panelList[i]}} - {{grade[i]}} </b>
-                    </div>
+                    <b><h3 style="color: white; padding-bottom: 30px;">PanelList</h3></b>
+                   <b style="color: white;">
+                    Id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pid}} <br>
+                    Name :&nbsp; {{panFirstName}} {{panLastName}} <br>
+                    Grade :&nbsp; {{grade}} </b>
                 </div>
             </div>
             <div  class="column2">
                 <div class="card1">
                     <b><h3 style="color: white; padding-bottom: 30px;">Candidate</h3></b>
-                    <b style="color: white;">{{candidate_id}} <br>
-                    {{candidate_name}} <br>
-                    {{contact}} <br></b>
-                </div>
+                   <b style="color: white;">
+                    Id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cid}} <br>
+                    Name :&nbsp; {{canFirstName}} {{canLastName}} <br></b><br>
+                    </div>
             </div>
             <div class="column3">
                 <div class="card2">

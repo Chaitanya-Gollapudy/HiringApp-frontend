@@ -19,6 +19,17 @@ export class SelPanellistComponent implements OnInit {
   add(){
     this.service.getPanellist(this.pid).subscribe(data=>{
       alert(JSON.stringify(data));
+
+      let pid = data.pid;
+      let panFirstName = data.firstName;
+      let panLastName = data.lastName;
+      let grade = data.grade;
+
+      sessionStorage.setItem('pid',String(pid));
+      sessionStorage.setItem('panFirstName',String(panFirstName));
+      sessionStorage.setItem('panLastName',String(panLastName));
+      sessionStorage.setItem('grade',String(grade));
+
       this.router.navigateByUrl('');
     })
   }

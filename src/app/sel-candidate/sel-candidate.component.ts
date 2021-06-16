@@ -18,7 +18,16 @@ export class SelCandidateComponent implements OnInit {
 
   add(){
     this.service.getCandidate(this.cid).subscribe(data=>{
+      console.log(data);
       alert(JSON.stringify(data));
+      let cid = data.cid;
+      let canFirstName = data.firstName;
+      let canLastName = data.lastName;
+
+      sessionStorage.setItem('cid',String(cid));
+      sessionStorage.setItem('canFirstName',String(canFirstName));
+      sessionStorage.setItem('canLastName',String(canLastName));
+
       this.router.navigateByUrl('sel-panellist');
     })
   }

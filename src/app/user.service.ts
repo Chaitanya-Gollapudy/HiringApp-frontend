@@ -20,4 +20,9 @@ export class UserService {
     let url = "http://localhost:8383/searchPanellistId?pid="+pid;
     return this.http.get<Panellist>(url); 
   }
+
+  linkCanPan(cid: number, pid: number) : Observable<any>{
+    let url = "http://localhost:8383/linkCandidatePanellist?cid="+cid+"&pid=1"+pid;
+    return this.http.get<any>(url);
+  }
 }
