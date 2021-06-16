@@ -1,19 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-<<<<<<< HEAD
-  "cli": {
-    "analytics": false
-  },
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "HiringApp1": {
-=======
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "HiringApp": {
->>>>>>> origin/master
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -27,11 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
-            "outputPath": "dist/HiringApp1",
-=======
             "outputPath": "dist/HiringApp",
->>>>>>> origin/master
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -82,17 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
-              "browserTarget": "HiringApp1:build:production"
-            },
-            "development": {
-              "browserTarget": "HiringApp1:build:development"
-=======
               "browserTarget": "HiringApp:build:production"
             },
             "development": {
               "browserTarget": "HiringApp:build:development"
->>>>>>> origin/master
             }
           },
           "defaultConfiguration": "development"
@@ -100,11 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "HiringApp1:build"
-=======
             "browserTarget": "HiringApp:build"
->>>>>>> origin/master
           }
         },
         "test": {
@@ -127,9 +102,5 @@
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "HiringApp1"
-=======
   "defaultProject": "HiringApp"
->>>>>>> origin/master
 }
