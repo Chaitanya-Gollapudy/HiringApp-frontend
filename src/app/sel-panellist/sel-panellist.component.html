@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Panellist</title>
+</head>
+<body>
+    <h1>Select Panellist</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="add()">
+        <label id="title">Enter Panellist name/id: </label>
+        <input type="text"
+        placeholder="Enter Panellist name or id"
+        [(ngModel)]="pid"
+        name="pid"/>
+        <br/><br/>
+
+        <button type="submit">Next</button>
+
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select Candidate</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="add()">
+        <label id="title">Enter Candidate name/id: </label>
+        <input type="text"
+        placeholder="Enter Candidate name or id"
+        [(ngModel)]="cid"
+        name="cid"/>
+        <br/><br/>
+
+        <button type="submit">Next</button>
+
+    </form>
+
+    
+
+</body>
+</html>
