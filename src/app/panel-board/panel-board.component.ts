@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +16,10 @@ export class PanelBoardComponent implements OnInit {
   candidate_id: number = 123;
   candidate_name: string = 'Ravi';
   contact : number = 9999999999;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
   constructor() { }
 
   ngOnInit(): void {

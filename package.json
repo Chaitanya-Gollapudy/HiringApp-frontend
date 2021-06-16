@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "hiring-app1",
+=======
+  "name": "hiring-app",
+>>>>>>> origin/master
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

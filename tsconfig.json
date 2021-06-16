@@ -5,8 +5,12 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
     "strict": true,
     "strictPropertyInitialization": false,
+=======
+    "strict": false,
+>>>>>>> origin/master
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
