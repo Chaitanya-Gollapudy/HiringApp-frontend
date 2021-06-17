@@ -8,13 +8,15 @@ import { SelCandidateComponent } from './sel-candidate/sel-candidate.component';
 import { SelPanellistComponent } from './sel-panellist/sel-panellist.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { WebViewerComponent } from './web-viewer/web-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PanelBoardComponent,
     SelCandidateComponent,
-    SelPanellistComponent
+    SelPanellistComponent,
+    WebViewerComponent
   ],
   imports: [
     BrowserModule,

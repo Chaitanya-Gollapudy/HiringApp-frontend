@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Candidate } from '../app-model/candidate';
 import { UserService } from '../user.service';
+import WebViewer from '@pdftron/webviewer';
 
 @Component({
   selector: 'app-panel-board',
@@ -44,6 +45,7 @@ export class PanelBoardComponent implements OnInit {
     this.grade = sessionStorage.getItem('grade');
 
     this.candidate.cid = this.cid;
+
   }
 
   add(){
