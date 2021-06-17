@@ -19,7 +19,7 @@ export class SelCandidateComponent implements OnInit {
   add(){
     this.service.getCandidate(this.cid).subscribe(data=>{
       console.log(data);
-      alert(JSON.stringify(data));
+      alert(JSON.stringify(data.firstName));
       let cid = data.cid;
       let canFirstName = data.firstName;
       let canLastName = data.lastName;

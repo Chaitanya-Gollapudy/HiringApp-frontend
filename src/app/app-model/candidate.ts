@@ -9,7 +9,7 @@ export class Candidate{
 	dateOfBirth: Date;
 	resume: string;
 	feedback: string;
-	rating: string;
-	SelStatus: string;
+	rating: number;
+	selStatus: string;
 	level: number;
 }

@@ -27,10 +27,13 @@
                     Name :&nbsp; {{canFirstName}} {{canLastName}} <br></b><br>
                     </div>
             </div>
+
+            <form  (ngSubmit)="add()" #myForm="ngForm">
             <div class="column3">
                 <div class="card2">
                     <b><h3 style="color: red;">Ratings </h3></b><br>
-                    <table>
+                    <input type="number" name="candidate" [(ngModel)]="candidate.rating" />
+                    <!--<table>
                         <th>
                             Programming
                             <table>
@@ -55,22 +58,32 @@
                             Communication Skills
                             <tr><input type="text" size="1" maxlength="2">/10</tr>
                         </th>
-                    </table>
+                    </table>-->
                 </div>
             </div>
             <div class="column4">
                 <div class="card3">
                     <b><h3 style="color: red;">Final Feedback</h3></b><br>
-                    <textarea name="Feedback" id="Feedback" rows="4" cols="180"></textarea>
+                    <textarea name="feedback" id="feedback" rows="4" cols="180" [(ngModel)]="candidate.feedback"></textarea>
                 </div>
             </div>
             <div class="column4">
                 <div class="card4">
-                    <button class="btn btn-success" style="float: left; margin-left: 400px;">Selected</button>
+                    <!--<button class="btn btn-success" style="float: left; margin-left: 400px;">Selected</button>
                     <button class="btn btn-danger" style="float: right; margin-right: 400px;">Rejected</button>
-                    <button class="btn btn-primary" style="float: center;">Hold</button>
+                    <button class="btn btn-primary" style="float: center;">Hold</button>-->
+
+                    <div class="form-group">
+                        <label>Select Status</label>
+                        <select class="form-control"
+                        name="selStatus" [(ngModel)]="candidate.selStatus">
+                            <option *ngFor="let s of selStatus" value="{{ s }}">{{ s }}</option>
+                        </select>
+                    </div>
                 </div>
+               <button type="submit">Submit</button>
             </div>
+        </form>
         </div>
         <footer>
             <h5 style="color: white; background-color: black; text-align: center;">Hiring App Ltd</h5>

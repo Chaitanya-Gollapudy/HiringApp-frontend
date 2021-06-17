@@ -25,4 +25,9 @@ export class UserService {
     let url = "http://localhost:8383/linkCandidatePanellist?cid="+cid+"&pid=1"+pid;
     return this.http.get<any>(url);
   }
+
+  addCandidateDetail(candidate: Candidate) : Observable<object>{
+    let url = "http://localhost:8383/addCandidateDetail";
+    return this.http.post(url, candidate);
+  }
 }

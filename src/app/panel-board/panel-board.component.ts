@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Candidate } from '../app-model/candidate';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-panel-board',
@@ -13,8 +15,14 @@ export class PanelBoardComponent implements OnInit {
   candidate_name: string = 'Ravi';
   contact : number = 9999999999;
    */
+
+  candidate: Candidate =new Candidate();
+
+  selStatus: string[] = [
+    "Selected","Rejected","Hold"
+  ]
   
-  constructor() { }
+  constructor( private service : UserService) { }
 
   cid: any;
   canFirstName: any;
@@ -34,6 +42,15 @@ export class PanelBoardComponent implements OnInit {
     this.panFirstName = sessionStorage.getItem('panFirstName');
     this.panLastName = sessionStorage.getItem('panLastName');
     this.grade = sessionStorage.getItem('grade');
+
+    this.candidate.cid = this.cid;
+  }
+
+  add(){
+    console.log(this.candidate);
+    this.service.addCandidateDetail(this.candidate).subscribe(data=>{
+      alert(JSON.stringify(data));
+    })
   }
 
 }
