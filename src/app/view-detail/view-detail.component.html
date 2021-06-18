@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>View Details</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="select()">
+        <label id="title">Enter Candidate name/id: </label>
+        <input type="text"
+        placeholder="Enter Candidate name or id"
+        [(ngModel)]="cid"
+        name="cid"/>
+        <br/><br/>
+
+        <button type="submit">Select</button>
+
+    </form>
+
+    <form #myForm="ngForm" (ngSubmit)="back()">
+        <button type="submit">Back</button>
+    </form>
+
+    <div [hidden]="!myForm.submitted">
+        Candidate id: {{candidate.cid}}<br>
+        First Name: {{candidate.firstName}}<br>
+        Last Name: {{candidate.lastName}}<br>
+        Mobile No: {{candidate.mobileNo}}<br>
+        Email Id: {{candidate.emailId}}<br>
+        Date Of Birth: {{candidate.dateOfBirth}}<br>
+        Feedback: {{candidate.feedback}}<br>
+        Rating: {{candidate.rating}}<br>
+        Selection Status: {{candidate.selStatus}}<br>
+        Level: {{candidate.level}}<br>
+    </div>
+
+</body>
+</html>

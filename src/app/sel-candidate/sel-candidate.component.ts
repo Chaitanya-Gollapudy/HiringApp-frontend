@@ -31,4 +31,9 @@ export class SelCandidateComponent implements OnInit {
       this.router.navigateByUrl('sel-panellist');
     })
   }
+
+  back(){
+    this.router.navigateByUrl('admin');
+  }
+  
 }

@@ -9,6 +9,8 @@ import { SelPanellistComponent } from './sel-panellist/sel-panellist.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WebViewerComponent } from './web-viewer/web-viewer.component';
+import { AdminComponent } from './admin/admin.component';
+import { ViewDetailComponent } from './view-detail/view-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { WebViewerComponent } from './web-viewer/web-viewer.component';
     PanelBoardComponent,
     SelCandidateComponent,
     SelPanellistComponent,
-    WebViewerComponent
+    WebViewerComponent,
+    AdminComponent,
+    ViewDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -30,8 +30,11 @@ export class SelPanellistComponent implements OnInit {
       sessionStorage.setItem('panLastName',String(panLastName));
       sessionStorage.setItem('grade',String(grade));
 
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('admin');
     })
   }
 
+  back(){
+    this.router.navigateByUrl('sel-candidate');
+  }
 }
