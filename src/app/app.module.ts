@@ -12,6 +12,7 @@ import { WebViewerComponent } from './web-viewer/web-viewer.component';
 import { AdminComponent } from './admin/admin.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { PanelLoginComponent } from './panel-login/panel-login.component';
+import { PastInterviewsComponent } from './past-interviews/past-interviews.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PanelLoginComponent } from './panel-login/panel-login.component';
     WebViewerComponent,
     AdminComponent,
     ViewDetailComponent,
-    PanelLoginComponent
+    PanelLoginComponent,
+    PastInterviewsComponent
   ],
   imports: [
     BrowserModule,

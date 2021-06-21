@@ -30,4 +30,9 @@ export class UserService {
     let url = "http://localhost:8383/addCandidateDetail";
     return this.http.post(url, candidate);
   }
+  
+  fetchCandidate(): Observable<object>{
+    let url= "http://localhost:8383/fetchAllCandidates";
+    return this.http.get(url);
+  }
 }
