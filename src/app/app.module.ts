@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WebViewerComponent } from './web-viewer/web-viewer.component';
 import { AdminComponent } from './admin/admin.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
+import { PanelLoginComponent } from './panel-login/panel-login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ViewDetailComponent } from './view-detail/view-detail.component';
     SelPanellistComponent,
     WebViewerComponent,
     AdminComponent,
-    ViewDetailComponent
+    ViewDetailComponent,
+    PanelLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { PanelBoardComponent } from './panel-board/panel-board.component';
+import { PanelLoginComponent } from './panel-login/panel-login.component';
 import { SelCandidateComponent } from './sel-candidate/sel-candidate.component';
 import { SelPanellistComponent } from './sel-panellist/sel-panellist.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'sel-panellist',component:SelPanellistComponent},
   {path: 'web-viewer',component:WebViewerComponent},
   {path: 'admin',component:AdminComponent},
-  {path: 'view-detail',component:ViewDetailComponent}
+  {path: 'view-detail',component:ViewDetailComponent},
+  {path: 'panel-login',component:PanelLoginComponent},
 ];
 
 @NgModule({
