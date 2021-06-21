@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Candidate } from '../app-model/candidate';
 import { UserService } from '../user.service';
 import WebViewer from '@pdftron/webviewer';
@@ -8,7 +8,7 @@ import WebViewer from '@pdftron/webviewer';
   templateUrl: './panel-board.component.html',
   styleUrls: ['./panel-board.component.css']
 })
-export class PanelBoardComponent implements OnInit {
+export class PanelBoardComponent implements OnInit, AfterViewInit {
 
   /* panelList:any = ['Neha','Manoj','Pruthvi'];
   grade : any = ['p3','p2','manager'];
@@ -16,6 +16,8 @@ export class PanelBoardComponent implements OnInit {
   candidate_name: string = 'Ravi';
   contact : number = 9999999999;
    */
+
+  @ViewChild('viewer') viewerRef: ElementRef;
 
   candidate: Candidate =new Candidate();
 
@@ -46,6 +48,15 @@ export class PanelBoardComponent implements OnInit {
 
     this.candidate.cid = this.cid;
 
+  }
+
+  ngAfterViewInit(): void {
+    WebViewer({
+      path: '../assets/lib',
+      //initialDoc:'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf'
+      initialDoc: 'assets/files/pranali.pdf'
+    }, this.viewerRef.nativeElement).then(instance => {
+    }); 
   }
 
   add(){
