@@ -35,11 +35,13 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
   panFirstName: any;
   panLastName: any; 
   grade: any;
+  resume: any;
 
   ngOnInit(): void {
     this.cid = sessionStorage.getItem('cid');
     this.canFirstName = sessionStorage.getItem('canFirstName');
     this.canLastName = sessionStorage.getItem('canLastName');
+    this.resume = sessionStorage.getItem('resume');
 
     this.pid = sessionStorage.getItem('pid');
     this.panFirstName = sessionStorage.getItem('panFirstName');
@@ -47,14 +49,15 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
     this.grade = sessionStorage.getItem('grade');
 
     this.candidate.cid = this.cid;
-
   }
+
+  
 
   ngAfterViewInit(): void {
     WebViewer({
       path: '../assets/lib',
       //initialDoc:'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf'
-      initialDoc: 'assets/files/pranali.pdf'
+      initialDoc: 'assets/files/'+this.resume
     }, this.viewerRef.nativeElement).then(instance => {
     }); 
   }

@@ -23,10 +23,12 @@ export class SelCandidateComponent implements OnInit {
       let cid = data.cid;
       let canFirstName = data.firstName;
       let canLastName = data.lastName;
+      let resume = data.resume;
 
       sessionStorage.setItem('cid',String(cid));
       sessionStorage.setItem('canFirstName',String(canFirstName));
       sessionStorage.setItem('canLastName',String(canLastName));
+      sessionStorage.setItem('resume',String(resume));
 
       this.router.navigateByUrl('sel-panellist');
     })
