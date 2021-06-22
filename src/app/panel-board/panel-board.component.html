@@ -32,33 +32,33 @@
             <div class="column3">
                 <div class="card2">
                     <b><h3 style="color: red;">Ratings </h3></b><br>
-                    <input type="number" name="candidate" [(ngModel)]="candidate.rating" />
-                    <!--<table>
+                   <!-- <input type="number" name="candidate" [(ngModel)]="candidate.rating" />-->
+                    <table>
                         <th>
-                            Programming
+                            {{techs[0]}}
                             <table>
                                 <td>Technical</td>
                                 <td>Reasoning</td>
                             </table>
-                                <tr><input type="text" size="1" maxlength="2">/10
-                                <input type="text" size="1" maxlength="2">/10</tr>
+                                <tr><input type="number"  name="one" [(ngModel)]="this.one">/10
+                                <input type="number" name="two" [(ngModel)]="this.two">/10</tr>
                         </th>
                         <th>
-                            Specialization
+                            {{techs[1]}}
                             <table>
                                 <td>Technical</td>
                                 <td>Reasoning</td>
                             </table>
                             <tr>
-                                <input type="text" size="1" maxlength="2">/10
-                                <input type="text" size="1" maxlength="2">/10
+                                <input type="number"  name="three" [(ngModel)]="this.three">/10
+                                <input type="number"  name="four" [(ngModel)]="this.four">/10
                             </tr>
                         </th>
                         <th>
                             Communication Skills
-                            <tr><input type="text" size="1" maxlength="2">/10</tr>
+                            <tr><input type="number" name="five" [(ngModel)]="this.five">/10</tr>
                         </th>
-                    </table>-->
+                    </table>
                 </div>
             </div>
             <div class="column4">

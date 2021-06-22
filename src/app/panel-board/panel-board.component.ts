@@ -36,12 +36,23 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
   panLastName: any; 
   grade: any;
   resume: any;
+  skills: any;
+  techs: any[];
+  one: number = 0;
+  two: number = 0;
+  three: number = 0;
+  four: number = 0;
+  five: number = 0;
+  
 
   ngOnInit(): void {
     this.cid = sessionStorage.getItem('cid');
     this.canFirstName = sessionStorage.getItem('canFirstName');
     this.canLastName = sessionStorage.getItem('canLastName');
     this.resume = sessionStorage.getItem('resume');
+    this.skills = sessionStorage.getItem('skills');
+
+    this.techs = this.skills.split(',');
 
     this.pid = sessionStorage.getItem('pid');
     this.panFirstName = sessionStorage.getItem('panFirstName');
@@ -49,6 +60,10 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
     this.grade = sessionStorage.getItem('grade');
 
     this.candidate.cid = this.cid;
+    this.candidate.rating = (this.one+this.two+this.three+this.four+this.five)/5;
+
+    console.log(this.techs);
+    console.log(this.one);
   }
 
   

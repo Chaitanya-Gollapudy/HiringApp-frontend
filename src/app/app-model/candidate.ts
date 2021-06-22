@@ -12,4 +12,5 @@ export class Candidate{
 	rating: number;
 	selStatus: string;
 	level: number;
+	skills: string[];
 }
