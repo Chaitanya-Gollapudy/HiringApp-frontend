@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { InterviewComponent } from './interview/interview.component';
 import { LoginComponent } from './login/login.component';
 import { PanelBoardComponent } from './panel-board/panel-board.component';
 import { PanelLoginComponent } from './panel-login/panel-login.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'panel-login',component:PanelLoginComponent},
   {path: 'past-interview',component:PastInterviewsComponent},
   {path: 'login',component:LoginComponent},
+  {path: 'interview',component:InterviewComponent}
 ];
 
 @NgModule({

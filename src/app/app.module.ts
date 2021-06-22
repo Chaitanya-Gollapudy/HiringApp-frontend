@@ -14,6 +14,7 @@ import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { PanelLoginComponent } from './panel-login/panel-login.component';
 import { PastInterviewsComponent } from './past-interviews/past-interviews.component';
 import { LoginComponent } from './login/login.component';
+import { InterviewComponent } from './interview/interview.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     ViewDetailComponent,
     PanelLoginComponent,
     PastInterviewsComponent,
-    LoginComponent
+    LoginComponent,
+    InterviewComponent
   ],
   imports: [
     BrowserModule,

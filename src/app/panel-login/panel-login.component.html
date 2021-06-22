@@ -1,7 +1,7 @@
 <div class="topnav">
     <a class="active" href="/panel-login">Upcoming Interviews</a>
     <a href="/past-interview">Past Interviews</a>
-    <a href="/panel-login" style="float: right;">LogOut</a>
+    <a href="/login" style="float: right;">LogOut</a>
   </div>
 <div class="details" *ngFor="let r of result;index as i">
   <div class="card" *ngIf="result[i].selStatus=='Selected' && result[i].level!=3">
@@ -11,6 +11,6 @@
     <div class="container"><b><h3>Rating-{{result[i].rating}}</h3></b></div>
     <div class="container"><b><h3>Status-{{result[i].selStatus}}</h3></b></div>
     <div class="container"><b><h3>Level-{{result[i].level}}</h3></b></div>
-    <a href="http://localhost:3000/">Take Interview</a>
+    <button (click)='takeInterview(i)'>Take Interview</button>
   </div>
 </div>

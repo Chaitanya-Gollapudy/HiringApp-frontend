@@ -24,4 +24,17 @@ export class PanelLoginComponent implements OnInit {
     });
   }
 
+  takeInterview(i:number){
+    
+    let cid = this.result[i].cid;
+    let canFirstName = this.result[i].firstName;
+    let canLastName = this.result[i].lastName;
+    let resume = this.result[i].resume;
+      sessionStorage.setItem('cid',String(cid));
+      sessionStorage.setItem('canFirstName',String(canFirstName));
+      sessionStorage.setItem('canLastName',String(canLastName));
+      sessionStorage.setItem('resume',String(resume));
+    this.router.navigateByUrl('/interview');
+  }
+
 }
