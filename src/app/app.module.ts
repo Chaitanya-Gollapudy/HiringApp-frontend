@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { PanelLoginComponent } from './panel-login/panel-login.component';
 import { PastInterviewsComponent } from './past-interviews/past-interviews.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PastInterviewsComponent } from './past-interviews/past-interviews.compo
     AdminComponent,
     ViewDetailComponent,
     PanelLoginComponent,
-    PastInterviewsComponent
+    PastInterviewsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
