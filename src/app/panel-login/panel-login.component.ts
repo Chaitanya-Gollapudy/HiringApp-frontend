@@ -30,10 +30,14 @@ export class PanelLoginComponent implements OnInit {
     let canFirstName = this.result[i].firstName;
     let canLastName = this.result[i].lastName;
     let resume = this.result[i].resume;
+    let skills = this.result[i].skills;
+
       sessionStorage.setItem('cid',String(cid));
       sessionStorage.setItem('canFirstName',String(canFirstName));
       sessionStorage.setItem('canLastName',String(canLastName));
       sessionStorage.setItem('resume',String(resume));
+      sessionStorage.setItem('skills',String(skills));
+      
     this.router.navigateByUrl('/interview');
   }
 

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PanelBoardComponent } from './panel-board.component';
