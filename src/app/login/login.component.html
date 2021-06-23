@@ -3,12 +3,24 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <form  class="box"> 
+
+                <form  class="box" #loginForm="ngForm" (ngSubmit) = "loginCheck($event)"> 
                     <h1>Panel Login</h1>
                     <p class="text-muted" style="color: white;"> Please enter your id and password!</p>
-                    <input type="text" name="email" placeholder="enter your ID"> 
-                    <input type="password" name="password" placeholder="enter your password">
-                    <button class="loginbtn">Login</button>
+
+                    <input type="text" name="pid" placeholder="enter your ID" #id="ngModel" [(ngModel)]="login.pid" required> 
+                    <div class="validations" *ngIf="loginForm.submitted && id.invalid && (id.dirty||id.touched)">
+                             Id is required!
+                    </div>
+
+                    <input type="password" name="password" placeholder="enter your password" #psw="ngModel" [(ngModel)]="login.password" required>
+                    <div class="validations" *ngIf="loginForm.submitted && psw.invalid && (psw.dirty||psw.touched)">
+                             Enter Valid Password!
+                    </div><br>
+                    
+                    <p class="validations">{{ message }}</p>
+
+                    <button class="loginbtn" type="submit" [disabled]>Login</button>
                 </form>
             </div>
         </div>

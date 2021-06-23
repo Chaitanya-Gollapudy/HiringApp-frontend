@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Candidate } from './app-model/candidate';
+import { Login } from './app-model/login';
 import { Panellist } from './app-model/panellist';
 
 @Injectable({
@@ -34,5 +35,10 @@ export class UserService {
   fetchCandidate(): Observable<object>{
     let url= "http://localhost:8383/fetchAllCandidates";
     return this.http.get(url);
+  }
+
+  login(login: Login) : Observable<any> {
+    let url = "http://localhost:8383/userlogin";
+   return this.http.post(url, login); 
   }
 }
