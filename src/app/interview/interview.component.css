@@ -1,0 +1,16 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.body{
+    margin-left: 600px;
+    margin-top: 40px;
+}
+.head{
+    background-color: green;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.buttons{
+    margin-top:250px;
+    margin-bottom: 280px;
+}

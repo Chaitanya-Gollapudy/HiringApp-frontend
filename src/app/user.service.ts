@@ -41,4 +41,9 @@ export class UserService {
     let url = "http://localhost:8383/userlogin";
    return this.http.post(url, login); 
   }
+
+  sendMail(cid:number, link:string) : Observable<any>{
+    let url = "http://localhost:8383/sendMail?cid="+cid+"&roomId="+link;
+    return this.http.get(url); 
+  }
 }
