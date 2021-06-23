@@ -31,34 +31,14 @@
             <form  (ngSubmit)="add()" #myForm="ngForm">
             <div class="column3">
                 <div class="card2">
-                    <b><h3 >Ratings </h3></b><br>
+                    <b><h3 style="color: red;">Ratings </h3></b><br>
                    <!-- <input type="number" name="candidate" [(ngModel)]="candidate.rating" />-->
-                    <table > 
-                        <th>
-                            {{techs[0]}}
-                            <table>
-                                <td>Technical</td>
-                                <td>Reasoning</td>
-                            </table>
-                                <tr><input type="text" size="2" length="2"  name="one">/10
-                                <input type="text" size="2" length="2" name="two">/10</tr>
-                        </th>
-                        <th>
-                            {{techs[1]}}
-                            <table>
-                                <td>Technical</td>
-                                <td>Reasoning</td>
-                            </table>
-                            <tr>
-                                <input type="text" size="2" length="2"  name="three">/10
-                                <input type="text" size="2" length="2" name="four">/10
-                            </tr>
-                        </th>
-                        <th>
-                            Communication Skills
-                            <tr><input type="text" size="2" length="2" name="five">/10</tr>
-                        </th>
-                    </table>
+                    <div class="skill" *ngFor="let t of techs;index as i">
+                        <h5 style="color: red;">{{techs[i]}}</h5>
+                        <input type="number" name="rating" [(ngModel)]="rating[i]">/10
+                    </div>
+                        <h5 style="color: red;">Communication Skills</h5>
+                        <input type="number" name="rating">/10
                 </div>
             </div>
             <div class="column4">

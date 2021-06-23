@@ -13,7 +13,7 @@
   /* Float four columns side by side */
   .column {
     float: left;
-    width: 50%;
+    width: 69%;
     padding: 0 5px;
     margin-right: 5px;
   }
@@ -58,25 +58,29 @@
     background-color: #f1f1f1;
     margin-left: 15px;
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 250px;
   }
 
   .card1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     background-color: green;
     padding-bottom: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   .cards1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     background-color: green;
     padding-bottom: 20px;
+    margin-left: 40px;
+    margin-bottom: 10px;
   }
   .card2{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 35px;
     padding-top: 8px;
-    padding-bottom: 155px;
+    padding-bottom: 60px;
+    margin-left: 40px;
+    padding-right: 100px;
     padding-right: 95px;
     background-color: #f1f1f1;
     width: fit-content;

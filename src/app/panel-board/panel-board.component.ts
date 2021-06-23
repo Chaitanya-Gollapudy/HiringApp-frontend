@@ -44,6 +44,8 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
   three: number = 0;
   four: number = 0;
   five: number = 0;
+  rating:any =[];
+  ratinga:any = 0;
   
 
   ngOnInit(): void {
@@ -56,8 +58,8 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
     this.techs = this.skills.split(',');
 
     this.pid = sessionStorage.getItem('pid');
-    this.panFirstName = sessionStorage.getItem('panFirstName');
-    this.panLastName = sessionStorage.getItem('panLastName');
+    this.panFirstName = sessionStorage.getItem('firstName');
+    this.panLastName = sessionStorage.getItem('lastName');
     this.grade = sessionStorage.getItem('grade');
 
     this.candidate.cid = this.cid;
@@ -79,10 +81,16 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
   }
 
   add(){
+    for(let i=0;i<this.rating.length;i++){
+        this.ratinga += this.rating[i];
+    }
+    this.ratinga/=(this.rating.length)*10;
+    this.ratinga*=5;
+    this.candidate.rating=this.ratinga;
     console.log(this.candidate);
     this.service.addCandidateDetail(this.candidate).subscribe(data=>{
       alert(JSON.stringify(data));
-      this.router.navigateByUrl('/panel-login')
+      //this.router.navigateByUrl('/panel-login')
     })
   }
 
