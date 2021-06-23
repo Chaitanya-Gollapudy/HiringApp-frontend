@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { CallEndComponent } from './call-end/call-end.component';
 import { InterviewComponent } from './interview/interview.component';
 import { LoginComponent } from './login/login.component';
 import { PanelBoardComponent } from './panel-board/panel-board.component';
@@ -12,7 +13,7 @@ import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { WebViewerComponent } from './web-viewer/web-viewer.component';
 
 const routes: Routes = [
-  {path:'',component:PanelBoardComponent},
+  {path:'panel-board',component:PanelBoardComponent},
   {path:'sel-candidate',component:SelCandidateComponent},
   {path:'sel-panellist',component:SelPanellistComponent},
   {path: 'web-viewer',component:WebViewerComponent},
@@ -20,8 +21,9 @@ const routes: Routes = [
   {path: 'view-detail',component:ViewDetailComponent},
   {path: 'panel-login',component:PanelLoginComponent},
   {path: 'past-interview',component:PastInterviewsComponent},
-  {path: 'login',component:LoginComponent},
-  {path: 'interview',component:InterviewComponent}
+  {path: '',component:LoginComponent},
+  {path: 'interview',component:InterviewComponent},
+  {path: 'call-end',component:CallEndComponent}
 ];
 
 @NgModule({

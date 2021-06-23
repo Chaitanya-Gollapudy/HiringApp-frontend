@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { Candidate } from '../app-model/candidate';
 import { UserService } from '../user.service';
 import WebViewer from '@pdftron/webviewer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panel-board',
@@ -25,7 +26,7 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
     "Selected","Rejected","Hold"
   ]
   
-  constructor( private service : UserService) { }
+  constructor( private service : UserService,private router: Router) { }
 
   cid: any;
   canFirstName: any;
@@ -81,6 +82,7 @@ export class PanelBoardComponent implements OnInit, AfterViewInit {
     console.log(this.candidate);
     this.service.addCandidateDetail(this.candidate).subscribe(data=>{
       alert(JSON.stringify(data));
+      this.router.navigateByUrl('/panel-login')
     })
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interview',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   createRoom(){
     let win = window.open('http://localhost:3000/');
+    this.router.navigateByUrl('/panel-board');
   }
 
   shareLink(){

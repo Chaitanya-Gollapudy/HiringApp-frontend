@@ -7,25 +7,24 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    
   }
   
   /* Float four columns side by side */
   .column {
     float: left;
-    width: 70%;
+    width: 50%;
     padding: 0 5px;
+    margin-right: 5px;
   }
   .column1{
     float: left;
-    width: 14%;
+    width: 25%;
     padding: 0 5px;
   }
   .column2{
     float: left;
-    width: 16%;
+    width: 24%;
     padding: 0 5px;
   }
   .column3 {
@@ -52,32 +51,42 @@
   }
   
   /* Style the counter cards */
-  /*
+  
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-    padding: 253px;
     text-align: center;
     background-color: #f1f1f1;
-  }*/
+    margin-left: 15px;
+    width: 100%;
+    padding-bottom: 60px;
+  }
 
   .card1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 70px;
-    padding-left: 5px;
-    padding-top: 10px;
-    background-color: #bd3838;
+    background-color: green;
+    padding-bottom: 40px;
+    margin-left: 20px;
+  }
+  .cards1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    background-color: green;
+    padding-bottom: 20px;
   }
   .card2{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 35px;
     padding-top: 8px;
     padding-bottom: 155px;
+    padding-right: 95px;
     background-color: #f1f1f1;
+    width: fit-content;
   }
   .card3{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 20px;
     background-color: #f1f1f1;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .card4{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
@@ -85,6 +94,8 @@
     text-align: center;
     background-color: #f1f1f1;
     margin-bottom: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */
@@ -100,7 +111,9 @@
     border: 1px solid black;
     border-collapse: collapse;
     padding-top: 10px;
-    
+    width: fit-content;
+    padding-right: 30px;
+    padding-bottom: 30px;
   }
 
   .webviewer{

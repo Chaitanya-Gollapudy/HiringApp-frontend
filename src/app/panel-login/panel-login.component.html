@@ -1,7 +1,7 @@
 <div class="topnav">
     <a class="active" href="/panel-login">Upcoming Interviews</a>
     <a href="/past-interview">Past Interviews</a>
-    <a href="/login" style="float: right;">LogOut</a>
+    <a href="/" style="float: right;">LogOut</a>
   </div>
 <div class="details" *ngFor="let r of result;index as i">
   <div class="card" *ngIf="result[i].selStatus=='Selected' && result[i].level!=3">

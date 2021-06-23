@@ -2,7 +2,7 @@
 <html>
     <body>
         <header>
-            <h1 style="text-align: center; color: red; padding-bottom: 20px; background-color: silver;">Candidate Remarks</h1>
+            <h1 style="text-align: center; color: white; margin-bottom: 30px; padding-bottom: 20px; background-color: green; padding-bottom: 50px; padding-top: 50px;">Candidate Remarks</h1>
         </header>
         <div class="row">
             <div class="column">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div  class="column2">
-                <div class="card1">
+                <div class="cards1">
                     <b><h3 style="color: white; padding-bottom: 30px;">Candidate</h3></b>
                    <b style="color: white;">
                     Id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cid}} <br>
@@ -31,17 +31,17 @@
             <form  (ngSubmit)="add()" #myForm="ngForm">
             <div class="column3">
                 <div class="card2">
-                    <b><h3 style="color: red;">Ratings </h3></b><br>
+                    <b><h3 >Ratings </h3></b><br>
                    <!-- <input type="number" name="candidate" [(ngModel)]="candidate.rating" />-->
-                    <table>
+                    <table > 
                         <th>
                             {{techs[0]}}
                             <table>
                                 <td>Technical</td>
                                 <td>Reasoning</td>
                             </table>
-                                <tr><input type="number"  name="one" [(ngModel)]="this.one">/10
-                                <input type="number" name="two" [(ngModel)]="this.two">/10</tr>
+                                <tr><input type="text" size="2" length="2"  name="one">/10
+                                <input type="text" size="2" length="2" name="two">/10</tr>
                         </th>
                         <th>
                             {{techs[1]}}
@@ -50,20 +50,20 @@
                                 <td>Reasoning</td>
                             </table>
                             <tr>
-                                <input type="number"  name="three" [(ngModel)]="this.three">/10
-                                <input type="number"  name="four" [(ngModel)]="this.four">/10
+                                <input type="text" size="2" length="2"  name="three">/10
+                                <input type="text" size="2" length="2" name="four">/10
                             </tr>
                         </th>
                         <th>
                             Communication Skills
-                            <tr><input type="number" name="five" [(ngModel)]="this.five">/10</tr>
+                            <tr><input type="text" size="2" length="2" name="five">/10</tr>
                         </th>
                     </table>
                 </div>
             </div>
             <div class="column4">
                 <div class="card3">
-                    <b><h3 style="color: red;">Final Feedback</h3></b><br>
+                    <b><h3>Final Feedback</h3></b><br>
                     <textarea name="feedback" id="feedback" rows="4" cols="180" [(ngModel)]="candidate.feedback"></textarea>
                 </div>
             </div>
@@ -74,19 +74,19 @@
                     <button class="btn btn-primary" style="float: center;">Hold</button>-->
 
                     <div class="form-group">
-                        <label>Select Status</label>
+                        <label><h3>Select Status</h3></label>
                         <select class="form-control"
                         name="selStatus" [(ngModel)]="candidate.selStatus">
                             <option *ngFor="let s of selStatus" value="{{ s }}">{{ s }}</option>
                         </select>
                     </div>
                 </div>
-               <button type="submit">Submit</button>
+               <button type="submit" class="btn btn-primary" style="margin-left: 700px;">Submit</button>
             </div>
         </form>
         </div>
         <footer>
-            <h5 style="color: white; background-color: black; text-align: center;">Hiring App Ltd</h5>
+            <h1 style="color: white; background-color: black; text-align: center; margin-top: 50px; padding-bottom: 50px; padding-top: 50px;">Hiring App Ltd</h1>
         </footer>
     </body>
 </html>
